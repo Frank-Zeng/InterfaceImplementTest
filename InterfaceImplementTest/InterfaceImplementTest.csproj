@@ -5,4 +5,15 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Unity" Version="5.8.11" />
+    <PackageReference Include="Unity.Interception" Version="5.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="unity.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

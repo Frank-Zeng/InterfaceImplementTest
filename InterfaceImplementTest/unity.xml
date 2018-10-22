@@ -1,0 +1,32 @@
+﻿<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Unity.Configuration"/>
+  </configSections>
+  <unity xmlns="http://schemas.microsoft.com/practices/2010/unity">
+    <sectionExtension type="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension, Unity.Interception.Configuration"/>
+    <containers>
+      <container name="aopContainer">
+        <extension type="Interception"/>
+        <register type="InterfaceImplementTest.IService,InterfaceImplementTest" mapTo="InterfaceImplementTest.Service,InterfaceImplementTest" />
+        <!--<register type="MyAOP.UnityWay.IUserProcessor,MyAOP" mapTo="MyAOP.UnityWay.UserProcessor,MyAOP">
+          <interceptor type="InterfaceInterceptor"/>
+          <interceptionBehavior type="MyAOP.UnityWay.ExceptionLoggingBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.CachingBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.LogBeforeBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.ParameterCheckBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.LogAfterBehavior, MyAOP"/>
+        </register>-->
+
+        <!--<register type="MyAOP.UnityWay.IUserProcessor,MyAOP" mapTo="MyAOP.UnityWay.UserProcessor,MyAOP">
+          <interceptor type="InterfaceInterceptor"/>
+          <interceptionBehavior type="MyAOP.UnityWay.ExceptionLoggingBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.CachingBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.LogBeforeBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.ParameterCheckBehavior, MyAOP"/>
+          <interceptionBehavior type="MyAOP.UnityWay.LogAfterBehavior, MyAOP"/>
+        </register>-->
+      </container>
+    </containers>
+  </unity>
+</configuration>
+
